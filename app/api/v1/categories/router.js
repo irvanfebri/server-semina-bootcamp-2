@@ -10,7 +10,7 @@ const {
 router.get(
   '/categories', 
   authenticateUser,
-  authorizeRoles('organizer','admin'), 
+  authorizeRoles('organizer'), 
   index
   );
 router.get(
