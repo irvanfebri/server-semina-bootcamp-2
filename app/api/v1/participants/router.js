@@ -2,9 +2,9 @@ const express = require('express');
 const router = express();
 const {
   signup,
-  // activeParticipant,
-  // signin,
-  // getAllLandingPage,
+  activeParticipant,
+  signin,
+  getAllLandingPage,
   // getDetailLandingPage,
   // getDashboard,
   // checkout,
@@ -14,12 +14,12 @@ const {
 const { authenticateParticipant } = require('../../../middlewares/auth');
 
 router.post('/auth/signup', signup);
-// router.post('/auth/signin', signin);
-// router.put('/active', activeParticipant);
-// router.get('/events', getAllLandingPage);
+router.post('/auth/signin', signin);
+router.put('/active', activeParticipant);
+router.get('/events', getAllLandingPage);
 // router.get('/events/:id', getDetailLandingPage);
-// router.get('/payments/:organizer', authenticateParticipant, getAllPayment);
-// router.get('/orders', authenticateParticipant, getDashboard);
+//router.get('/payments/:organizer', authenticateParticipant, getAllPayment);
+//router.get('/orders', authenticateParticipant, getDashboard);
 // router.post('/checkout', authenticateParticipant, checkout);
 
 module.exports = router;
